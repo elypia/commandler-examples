@@ -1,0 +1,69 @@
+plugins {
+    id "java"
+    id "idea"
+    id "jacoco"
+    id "com.github.johnrengelman.shadow" version "5.1.0"
+    /** Adds the commandlerdoc task for exporting docs for your Commandler application. */
+//    id "com.elypia.commandler" version "1.0.0"
+}
+
+group = "com.elypia.example"
+version = "1.0.0"
+description = "An example project to demonstate the usage of Commandler."
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    /** The core of Commandler, always required and exposed the core functionality of the framework. */
+    implementation "com.elypia.commandler:core:4.0.0"
+
+    /** Provides annotation configuration as oppoed to the default methods. (XML, System Properties etcetc) */
+//    implementation "com.elypia.commandler:annotation:4.0.0"
+
+    /** Provides validation support via Hibernate Validation API. */
+//    implementation "com.elypia.commandler:validation:4.0.0"
+
+    /** Provides a small base to get a console application started quickly. */
+    implementation "com.elypia.commandler:console:4.0.0"
+
+    // Allows Configuration with YAML (Apache Commons Configuration will pick this up on it's own.)
+    runtimeOnly "org.yaml:snakeyaml:1.25"
+
+    // Logging
+    implementation "org.slf4j:slf4j-api:1.7.28"
+    runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
+
+    // Testing
+    testImplementation "org.junit.jupiter:junit-jupiter:5.5.1"
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+/**
+ * Testing and Code Coverage
+ */
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+
+    reports {
+        html.enabled = false
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.4"
+}
+
+jacocoTestReport {
+    reports {
+        html.enabled = true
+        xml.enabled = false
+    }
+}
