@@ -2,14 +2,13 @@ plugins {
     id "java"
     id "idea"
     id "jacoco"
-    id "com.github.johnrengelman.shadow" version "5.1.0"
     /** Adds the commandlerdoc task for exporting docs for your Commandler application. */
 //    id "org.elypia.commandler" version "1.0.0"
 }
 
-group = "org.elypia.example"
+group = "org.elypia"
 version = "1.0.0"
-description = "An example project to demonstate the usage of Commandler."
+description = "An example project to demonstrate the usage of Commandler."
 sourceCompatibility = 11
 targetCompatibility = 11
 

@@ -1,18 +1,22 @@
+application:
+  name: Example
 commandler:
   integrations:
     - "org.elypia.commandler.console.ConsoleIntegration"
+  dispatchers:
+    - "org.elypia.commandler.dispatchers.StandardDispatcher"
   controllers:
     - type: "org.elypia.example.UtilityController"
-      name: Utilties
+      name: "Utilties"
       help: "Random utilities to add some quick generic functionality."
       properties:
         - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
-          value: util
+          value: "util"
       commands:
-        - method: ping
+        - method: "ping"
           name: "ping!"
           help: "Check if the application is still responsive!"
-          static: true
+          static: "true"
           properties:
             - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
-              value: ping
+              value: "ping"

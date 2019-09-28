@@ -1,16 +1,39 @@
+/*
+ * Copyright 2019-2019 Elypia CIC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.elypia.example;
 
 import org.elypia.commandler.Commandler;
-import org.elypia.commandler.console.ConsoleIntegration;
 import org.slf4j.*;
 
+/**
+ * Our main class, this will initialize Commandler and run the framework.
+ *
+ * @author seth@elypia.org (Syed Seth)
+ */
 public class Example {
 
+    /** Logging with SLF4J. */
     private static final Logger logger = LoggerFactory.getLogger(Example.class);
 
     public static void main(String[] args) {
-        ConsoleIntegration c = new ConsoleIntegration();
+        // Setup Commandler, this will initialize Commandler and perform any validation.
         Commandler commandler = new Commandler();
-        logger.debug("Loaded Commandler with configuration of {} properties.", commandler.getConfig().getProperties().size());
+
+        // Run Commandler, this actually sets up all integrations and starts receiving and handling events.
+        commandler.run();
     }
 }
