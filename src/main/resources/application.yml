@@ -1,11 +1,11 @@
 application:
   name: Example
 commandler:
-  integrations:
+  integration:
     - "org.elypia.commandler.console.ConsoleIntegration"
-  dispatchers:
+  dispatcher:
     - "org.elypia.commandler.dispatchers.StandardDispatcher"
-  controllers:
+  controller:
     - type: "org.elypia.example.UtilityController"
       name: "Utilties"
       help: "Random utilities to add some quick generic functionality."
@@ -20,3 +20,10 @@ commandler:
           properties:
             - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
               value: "ping"
+        - method: "sum"
+          name: "Sum"
+          help: "Add up a bunch of integer numbers."
+          static: "true"
+          properties:
+            - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
+              value: "sum, add"
