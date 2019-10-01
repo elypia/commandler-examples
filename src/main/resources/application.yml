@@ -7,23 +7,38 @@ commandler:
     - "org.elypia.commandler.dispatchers.StandardDispatcher"
   controller:
     - type: "org.elypia.example.UtilityController"
-      name: "Utilties"
-      help: "Random utilities to add some quick generic functionality."
-      properties:
+      name: "Utilities"
+      description: "Random utilities to add some quick generic functionality."
+      property:
         - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
-          value: "util"
-      commands:
+          value: "utils"
+      command:
         - method: "ping"
           name: "ping!"
-          help: "Check if the application is still responsive!"
+          description: "Check if the application is still responsive!"
           static: "true"
-          properties:
+          property:
             - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
               value: "ping"
         - method: "sum"
           name: "Sum"
-          help: "Add up a bunch of integer numbers."
+          description: "Add up a bunch of integer numbers."
           static: "true"
-          properties:
+          property:
             - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
-              value: "sum, add"
+              value: "sum"
+          param:
+            - name: numbers
+              description: All the numbers I should sum together!
+  messenger:
+    - type: "org.elypia.commandler.console.messengers.MiscMessenger"
+      provides: "java.lang.String"
+      compatible:
+        - "java.lang.Boolean"
+        - "java.lang.CharSequence"
+        - "java.lang.Character"
+        - "java.net.URL"
+    - type: "org.elypia.commandler.console.messengers.NumberMessenger"
+      provides: "java.lang.String"
+      compatible:
+        - "java.lang.Number"
