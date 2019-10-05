@@ -42,3 +42,9 @@ commandler:
       provides: "java.lang.String"
       compatible:
         - "java.lang.Number"
+        - "java.lang.Double"
+        - "java.lang.Float"
+        - "java.lang.Long"
+        - "java.lang.Integer"
+        - "java.lang.Short"
+        - "java.lang.Byte"

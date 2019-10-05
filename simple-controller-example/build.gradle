@@ -1,0 +1,4 @@
+dependencies {
+    // Allows Configuration with YAML (Apache Commons Configuration will pick this up on it's own.)
+    runtimeOnly "org.yaml:snakeyaml:1.25"
+}
