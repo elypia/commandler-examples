@@ -1,9 +1,13 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0' apply false
+}
+
 allprojects() {
     apply plugin: "idea"
     apply plugin: "jacoco"
 
     group = "org.elypia"
-    version = "0.0.0"
+    version = "4.0.0"
     description = "An example project to demonstrate the usage of Commandler."
 
     repositories {
@@ -12,12 +16,14 @@ allprojects() {
     }
 
     jacoco {
-        toolVersion = "0.8.4"
+        toolVersion = "0.8.5"
     }
 }
 
 subprojects() {
     apply plugin: "java"
+    apply plugin: "com.github.johnrengelman.shadow"
+
     /** Adds the commandlerdoc task for exporting docs for your Commandler application. */
 //    apply plugin: "org.elypia.commandler" version "1.0.0"
 
@@ -28,18 +34,18 @@ subprojects() {
 
     dependencies {
         // The core of Commandler, always required for any Commandler application.
-        implementation "org.elypia.commandler:core:4.0.0"
+        implementation "org.elypia.commandler:core:${version}"
 
         // A console integration for Commandler to handle commands in console.
-        implementation "org.elypia.commandler:console:4.0.0"
+        implementation "org.elypia.commandler:console:${version}"
 
         // Logging
-        implementation "org.slf4j:slf4j-api:1.7.28"
+        implementation "org.slf4j:slf4j-api:1.7.29"
         runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
 
         // Testing
         testImplementation "org.junit.jupiter:junit-jupiter:5.5.2"
-        testImplementation "org.mockito:mockito-core:3.0.0"
+        testImplementation "org.mockito:mockito-core:3.2.0"
     }
 
     /** Testing */

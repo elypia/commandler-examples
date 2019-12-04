@@ -14,20 +14,16 @@
  * limitations under the License.
  */
 
-package org.elypia.example;
+package org.elypia.example.annotationexample;
 
 import org.elypia.commandler.Commandler;
-import org.slf4j.*;
 
 /**
  * Our main class, this will initialize Commandler and run the framework.
  *
- * @author seth@elypia.org (Syed Seth)
+ * @author seth@elypia.org (Seth Falco)
  */
-public class Example {
-
-    /** Logging with SLF4J. */
-    private static final Logger logger = LoggerFactory.getLogger(Example.class);
+public class AnnotationExample {
 
     public static void main(String[] args) {
         // Setup Commandler, this will initialize Commandler and perform any validation.

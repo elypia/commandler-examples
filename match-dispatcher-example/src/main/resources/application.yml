@@ -1,0 +1,21 @@
+application:
+  name: "Match Dispatcher Example"
+commandler:
+  dispatcher:
+    - class: "org.elypia.commandler.dispatchers.MatchDispatcher"
+  controller:
+    - type: "org.elypia.example.matchdispatcher.ConversionController"
+      name: "Conversion"
+      description: "Convert units like weight, or lengths."
+      command:
+        - method: "convertWeight"
+          name: "Convert Weight"
+          description: "Convert weight between KG and lbs for users."
+          property:
+            - name: "org.elypia.commandler.dispatchers.MatchDispatcher.pattern"
+              value: "(?i)\\b([\\d,.]+)\\h*(KG|LBS?)\\b"
+          param:
+            - name: "value"
+              description: "The value of the unit to convert."
+            - name: "unit"
+              description: "The unit the user is converting for, KG or Lbs."

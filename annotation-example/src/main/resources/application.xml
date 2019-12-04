@@ -1,0 +1,10 @@
+<configuration xmlns="https://commandler.elypia.org"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://commandler.elypia.org application.xsd">
+  <application>
+    <name>Annotation Example</name>
+  </application>
+  <commandler>
+    <dispatcher>org.elypia.commandler.dispatchers.StandardDispatcher</dispatcher>
+  </commandler>
+</configuration>

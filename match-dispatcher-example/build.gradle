@@ -7,6 +7,6 @@ shadowJar {
     manifest {
         attributes 'Implementation-Title' : this.name,
                    'Implementation-Version' : version,
-                   'Main-Class' : "org.elypia.example.simplecontroller.SimpleControllerExample"
+                   'Main-Class' : "org.elypia.example.matchdispatcher.MatchDispatcherExample"
     }
 }

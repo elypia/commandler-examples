@@ -1,12 +1,16 @@
 dependencies {
     // Allows Configuration with YAML (Apache Commons Configuration will pick this up on it's own.)
     runtimeOnly "org.yaml:snakeyaml:1.25"
+
+    // An optional dependency which provides an implementation which
+    // performs validation with javax.validation annotations or XML.
+    implementation "org.elypia.commandler:validation:${version}"
 }
 
 shadowJar {
     manifest {
         attributes 'Implementation-Title' : this.name,
                    'Implementation-Version' : version,
-                   'Main-Class' : "org.elypia.example.simplecontroller.SimpleControllerExample"
+                   'Main-Class' : "org.elypia.example.javaxvalidation.JavaxValidationExample"
     }
 }

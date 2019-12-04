@@ -21,3 +21,31 @@ rootProject.name = 'commandler-examples'
  * and add numbers up.
  */
 include "simple-controller-example"
+
+/**
+ * Runs Commandler with validation support via the Hibernate Validator
+ * dependency. org.elypia.commandler:validation is an optional
+ * dependency which allows you to use the javax.validation API to
+ * validate commands through annotations or XML instead of code.
+ */
+include "javax-validation-example"
+
+/**
+ * Using Commandler with annotation support, and configuring it
+ * with annotations instead of with a traditional file formats.
+ */
+include 'annotation-example'
+
+/**
+ * Using Commandler with the MatchDispatcher instead of the
+ * StandardDispatcher. This will match commands by patterns
+ * (Regular Expression) instead of the standard format.
+ */
+include 'match-dispatcher-example'
+
+/**
+ * Using the StandardDispatcher with a static prefix
+ * defined in the configuration file.
+ */
+include 'prefix-example'
+

@@ -15,6 +15,7 @@
   ~ limitations under the License.
   -->
 <configuration>
+    <logger name="org.hibernate" level="WARN"/>
     <logger name="org.jboss" level="WARN"/>
     <logger name="org.jboss.weld.Validator" level="ERROR"/>
 

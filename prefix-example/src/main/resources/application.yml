@@ -1,10 +1,12 @@
 application:
-  name: "Simple Controller Example"
+  name: "Prefix Example"
 commandler:
   dispatcher:
     - class: "org.elypia.commandler.dispatchers.StandardDispatcher"
+      prefix:
+        - ">"
   controller:
-    - type: "org.elypia.example.simplecontroller.UtilityController"
+    - type: "org.elypia.example.prefix.UtilityController"
       name: "Utilities"
       description: "Random utilities to add some quick generic functionality."
       property:
@@ -18,13 +20,3 @@ commandler:
           property:
             - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
               value: "ping"
-        - method: "sum"
-          name: "Sum"
-          description: "Add up a bunch of integer numbers."
-          static: "true"
-          property:
-            - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
-              value: "sum"
-          param:
-            - name: "numbers"
-              description: "All the numbers I should sum together."

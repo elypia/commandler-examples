@@ -1,0 +1,30 @@
+application:
+  name: "Javax Validation Example"
+commandler:
+  dispatcher:
+    - class: "org.elypia.commandler.dispatchers.StandardDispatcher"
+  controller:
+    - type: "org.elypia.example.javaxvalidation.HotColdController"
+      name: "Hotter or Colder"
+      description: "A hotter colder game implementation in a controller!"
+      property:
+        - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
+          value: "hc"
+      command:
+        - method: "start"
+          name: "Start Game"
+          description: "Start an instance of the hotter or colder game."
+          static: "true"
+          property:
+            - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
+              value: "start"
+        - method: "guess"
+          name: "Guess Number"
+          description: "If a game is started, you can guess a number. I'll tell you if you're hotter or colder."
+          static: "true"
+          property:
+            - name: "org.elypia.commandler.dispatchers.StandardDispatcher.aliases"
+              value: "guess"
+          param:
+            - name: "number"
+              description: "The number you want to guess."

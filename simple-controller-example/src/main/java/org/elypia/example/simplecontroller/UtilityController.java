@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.elypia.example;
+package org.elypia.example.simplecontroller;
 
 import org.elypia.commandler.api.Controller;
 
@@ -24,7 +24,7 @@ import java.util.stream.IntStream;
  * The utility controller, this controller contains multiple commands
  * which are created per method and defined in the application.yml file.
  *
- * @author seth@elypia.org (Syed Seth)
+ * @author seth@elypia.org (Seth Falco)
  */
 public class UtilityController implements Controller {
 
