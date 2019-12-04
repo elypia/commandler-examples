@@ -34,11 +34,12 @@ Should any problems occur, come visit us over on [Discord]! We're always around 
 there are ample developers that would be willing to help; if it's a problem with the library
 itself then we'll make sure to get it sorted.
 
-[Discord]: https://discord.gg/hprGMaM "Discord Invite"
-[discord-members]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
+[Discord]: https://discordapp.com/invite/hprGMaM "Discord Invite"
 [gitlab]: https://gitlab.com/Elypia/commandler-examples/commits/master "Repository on GitLab"
+[elypia-donate]: https://elypia.org/donate "Donate to Elypia"
+[Commandler]: https://gitlab.com/Elypia/commandler "Commandler on GitLab"
+
+[discord-members]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
 [gitlab-build]: https://gitlab.com/Elypia/commandler-examples/badges/master/pipeline.svg "GitLab Build Shield"
 [gitlab-coverage]: https://gitlab.com/Elypia/commandler-examples/badges/master/coverage.svg "GitLab Coverage Shield"
 [donate-shield]: https://img.shields.io/badge/Elypia-Donate-blueviolet "Donate Shield"
-[elypia-donate]: https://elypia.org/donate "Donate to Elypia"
-[Commandler]: https://gitlab.com/Elypia/commandler "Commandler on GitLab"
