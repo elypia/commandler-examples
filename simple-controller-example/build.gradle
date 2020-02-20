@@ -1,6 +1,10 @@
 dependencies {
     // Allows Configuration with YAML (Apache Commons Configuration will pick this up on it's own.)
     runtimeOnly "org.yaml:snakeyaml:1.25"
+
+    
+    runtimeOnly "org.jboss.weld.se:weld-se-core:3.1.3.Final"
+    runtimeOnly "org.apache.deltaspike.core:deltaspike-core-impl:${deltaSpikeVersion}"
 }
 
 shadowJar {

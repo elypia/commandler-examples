@@ -1,8 +1,5 @@
 dependencies {
     implementation "org.elypia.commandler:annotation:${version}"
-
-    // TODO: We're not actually using this, Commandler is just getting mad without it.
-    runtimeOnly "org.yaml:snakeyaml:1.25"
 }
 
 shadowJar {

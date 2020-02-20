@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright 2019-2020 Elypia CIC
   ~
@@ -14,17 +13,16 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<configuration>
-    <logger name="org.jboss" level="ALL"/>
-    <logger name="org.jboss.weld.Validator" level="ERROR"/>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%highlight([%-5p]) [%blue(%d{MM/dd, UTC}) %green(%d{HH:mm:ss, UTC})] %blue([%logger]) %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <root level="ALL">
-        <appender-ref ref="STDOUT"/>
-    </root>
-</configuration>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
+       bean-discovery-mode="annotated" version="2.0">
+  <scan>
+    <exclude name="com.**"/>
+    <exclude name="javax.**"/>
+    <exclude name="org.apache.commons.**"/>
+    <exclude name="org.jboss.**"/>
+    <exclude name="org.slf4j.**"/>
+  </scan>
+</beans>

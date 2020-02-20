@@ -1,5 +1,6 @@
 plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0' apply false
+    id "io.spring.dependency-management" version "1.0.9.RELEASE" apply false
 }
 
 allprojects() {
@@ -9,6 +10,10 @@ allprojects() {
     group = "org.elypia"
     version = "4.0.0"
     description = "An example project to demonstrate the usage of Commandler."
+
+    ext {
+        deltaSpikeVersion = "1.9.3"
+    }
 
     repositories {
         mavenLocal()
@@ -23,6 +28,7 @@ allprojects() {
 subprojects() {
     apply plugin: "java"
     apply plugin: "com.github.johnrengelman.shadow"
+    apply plugin: "io.spring.dependency-management"
 
     /** Adds the commandlerdoc task for exporting docs for your Commandler application. */
 //    apply plugin: "org.elypia.commandler" version "1.0.0"
@@ -32,6 +38,22 @@ subprojects() {
 
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
+    dependencyManagement {
+        imports {
+            mavenBom "org.apache.deltaspike.distribution:distributions-bom:${deltaSpikeVersion}"
+        }
+    }
+
+    sourceSets {
+        main {
+            output.resourcesDir = output.classesDirs.singleFile
+        }
+
+        test {
+            output.resourcesDir = output.classesDirs.singleFile
+        }
+    }
+
     dependencies {
         // The core of Commandler, always required for any Commandler application.
         implementation "org.elypia.commandler:core:${version}"
@@ -40,12 +62,12 @@ subprojects() {
         implementation "org.elypia.commandler:console:${version}"
 
         // Logging
-        implementation "org.slf4j:slf4j-api:1.7.29"
+        implementation "org.slf4j:slf4j-api:1.7.30"
         runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
 
         // Testing
-        testImplementation "org.junit.jupiter:junit-jupiter:5.5.2"
-        testImplementation "org.mockito:mockito-core:3.2.0"
+        testImplementation "org.junit.jupiter:junit-jupiter:5.6.0"
+        testImplementation "org.mockito:mockito-core:3.2.4"
     }
 
     /** Testing */

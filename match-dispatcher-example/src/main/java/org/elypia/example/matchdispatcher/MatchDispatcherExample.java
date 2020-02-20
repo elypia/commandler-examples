@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 Elypia CIC
+ * Copyright 2019-2020 Elypia CIC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ public class MatchDispatcherExample {
 
     public static void main(String[] args) {
         // Setup Commandler, this will initialize Commandler and perform any validation.
-        Commandler commandler = new Commandler();
+        Commandler commandler = Commandler.create();
 
         // Run Commandler, this actually sets up all integrations and starts receiving and handling events.
         commandler.run();

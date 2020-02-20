@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 Elypia CIC
+ * Copyright 2019-2020 Elypia CIC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ package org.elypia.example.javaxvalidation;
 import org.elypia.commandler.api.Controller;
 import org.slf4j.*;
 
-import javax.inject.Singleton;
+import javax.enterprise.context.ApplicationScoped;
 import javax.validation.constraints.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -30,7 +30,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author seth@elypia.org (Seth Falco)
  */
-@Singleton
+@ApplicationScoped
 public class HotColdController implements Controller {
 
     private Logger logger = LoggerFactory.getLogger(HotColdController.class);

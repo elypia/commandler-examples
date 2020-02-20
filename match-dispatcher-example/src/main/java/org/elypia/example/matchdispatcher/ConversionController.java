@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 Elypia CIC
+ * Copyright 2019-2020 Elypia CIC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,8 @@ package org.elypia.example.matchdispatcher;
 
 import org.elypia.commandler.api.Controller;
 import org.elypia.commandler.dispatchers.MatchDispatcher;
+
+import java.util.Objects;
 
 /**
  * The converstion controller uses the {@link MatchDispatcher}
@@ -48,6 +50,8 @@ public class ConversionController implements Controller {
             convertedValue = value / KG_TO_LBS;
             convertedUnits = "KG";
         }
+
+        Objects.requireNonNull()
 
         return value + units + " is equal to " + convertedValue + convertedUnits;
     }
