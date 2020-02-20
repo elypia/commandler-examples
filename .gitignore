@@ -57,6 +57,7 @@ gradle-app.setting
 *.env
 
 # IntelliJ
+build/
 out/
 /.idea/
 *.iml
