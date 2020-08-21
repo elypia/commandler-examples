@@ -1,4 +1,8 @@
-# Commandler Examples [![Matrix]][matrix-community] [![Discord]][discord-guild] [![Build]][gitlab] [![Coverage]][gitlab] [![Donate]][elypia-donate]
+<div align="center">
+
+# Commandler Examples
+[![Matrix]][matrix-community] [![Discord]][discord-guild] [![Build]][gitlab] [![Coverage]][gitlab] [![Donate]][elypia-donate]
+</div>
 
 ## About
 These are examples that creates minimal console applications using 
@@ -34,13 +38,13 @@ there are ample developers that would be willing to help; if it's a problem with
 itself then we'll make sure to get it sorted.
 
 [matrix-community]: https://matrix.to/#/+elypia:matrix.org "Matrix Invite"
-[discord-guild]: https://discordapp.com/invite/hprGMaM "Discord Invite"
+[discord-guild]: https://discord.com/invite/hprGMaM "Discord Invite"
 [gitlab]: https://gitlab.com/Elypia/commandler-examples/commits/master "Repository on GitLab"
 [elypia-donate]: https://elypia.org/donate "Donate to Elypia"
 [Commandler]: https://gitlab.com/Elypia/commandler "Commandler on GitLab"
 
-[Matrix]: https://img.shields.io/matrix/elypia-general:matrix.org?logo=matrix "Matrix Shield"
-[Discord]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
+[Matrix]: https://img.shields.io/matrix/elypia:matrix.org?logo=matrix "Matrix Shield"
+[Discord]: https://discord.com/api/guilds/184657525990359041/widget.png "Discord Shield"
 [Build]: https://gitlab.com/Elypia/commandler-examples/badges/master/pipeline.svg "GitLab Build Shield"
 [Coverage]: https://gitlab.com/Elypia/commandler-examples/badges/master/coverage.svg "GitLab Coverage Shield"
-[Donate]: https://img.shields.io/badge/Elypia-Donate-blueviolet "Donate Shield"
+[Donate]: https://img.shields.io/badge/elypia-donate-blueviolet "Donate Shield"
